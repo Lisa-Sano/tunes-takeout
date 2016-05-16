@@ -1,4 +1,4 @@
-require 'httparty'
+require 'yelp'
 
 class Food
 
