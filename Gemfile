@@ -29,6 +29,8 @@ gem 'rspotify'
 
 gem 'httparty'
 
+gem 'simplecov', :require => false, :group => :test
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
