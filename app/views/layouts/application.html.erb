@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%= link_to "Log in", "auth/spotify" unless current_user %>
+<%= link_to "Sign In With Spotify", "auth/spotify" unless current_user %>
 <%= link_to "Logout", logout_path, method: :delete if current_user %>
 
 <%= yield %>
