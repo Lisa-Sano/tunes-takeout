@@ -1,0 +1,6 @@
+<%= @title %>
+
+<% @food.each_with_index do |f, i| %>
+  <p><%= "#{i + 1}: " + f.business.name %></p>
+  <p><%= @music[i].nil? ? "playlist not found" : @music[i].name %></p>
+<% end %>
