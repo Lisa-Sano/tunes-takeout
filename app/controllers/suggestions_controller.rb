@@ -3,7 +3,7 @@ require 'tunes_takeout'
 class SuggestionsController < ApplicationController
 
   def index
-    if params[:query].present?
+    if current_user && params[:query].present?
       @suggestions = TunesTakeoutWrapper.search(params[:query], params[:limit])["suggestions"]
       @title = "Search Results"
     else
