@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v2/business/banana-republic-bellevue
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - OAuth oauth_consumer_key="8JQ1Y278w82YImqqyGOs2A", oauth_nonce="60a78bdcda5244de9eed674eb9dbaa6f",
+        oauth_signature="wFAHmCZ8otkMPVY4MRKtyW%2FcUS4%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1463700363", oauth_token="9TkMHs9iaUnf4AF4a1iZ--G9haACiM25",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 19 May 2016 23:26:03 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d12a3b289330fd6db18f455b1e3c52a391463700363; expires=Fri, 19-May-17
+        23:26:03 GMT; path=/; domain=.yelp.com; HttpOnly
+      - bse=dfef0eddb6c67ee3cc4d58d8c3a55e9d; Domain=.yelp.com; Path=/; HttpOnly
+      - yuv=xWE_MMROuNFo8bIfg4s-djJlsUsv9GlFePsvrTYaMMqZKEKmAqSWf43zklK65psCtIMee6Z43VK_tPmerVnm5KBKnWQFp76w;
+        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Wed, 14-May-2036 23:26:03
+        GMT
+      X-Node:
+      - 10-64-77-156-uswest1aprod
+      - api_com
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Expires:
+      - Thu, 19 May 2016 23:26:03 GMT
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-64-0-189-uswest1aprod
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2a5b4fc9b69b285e-SJC
+    body:
+      encoding: ASCII-8BIT
+      string: '{"is_claimed": false, "rating": 3.0, "mobile_url": "http://m.yelp.com/biz/banana-republic-bellevue?utm_campaign=yelp_api\u0026utm_medium=api_v2_business\u0026utm_source=8JQ1Y278w82YImqqyGOs2A",
+        "rating_img_url": "https://s3-media3.fl.yelpcdn.com/assets/2/www/img/34bc8086841c/ico/stars/v1/stars_3.png",
+        "review_count": 25, "name": "Banana Republic", "rating_img_url_small": "https://s3-media3.fl.yelpcdn.com/assets/2/www/img/902abeed0983/ico/stars/v1/stars_small_3.png",
+        "url": "http://www.yelp.com/biz/banana-republic-bellevue?utm_campaign=yelp_api\u0026utm_medium=api_v2_business\u0026utm_source=8JQ1Y278w82YImqqyGOs2A",
+        "categories": [["Women''s Clothing", "womenscloth"], ["Accessories", "accessories"],
+        ["Men''s Clothing", "menscloth"]], "reviews": [{"rating": 5, "excerpt": "Great
+        selection of men''s clothing in the Seattle area. Although in Seattle downtown,
+        there is a dedicated men''s store - I have found that the store in...", "time_created":
+        1461548310, "rating_image_url": "https://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
+        "rating_image_small_url": "https://s3-media1.fl.yelpcdn.com/assets/2/www/img/c7623205d5cd/ico/stars/v1/stars_small_5.png",
+        "user": {"image_url": "http://s3-media1.fl.yelpcdn.com/photo/RirT8mJgN9BFTqaPAwVTeQ/ms.jpg",
+        "id": "KXX4O7tyZoKDhVPR60D1uQ", "name": "Salman M."}, "rating_image_large_url":
+        "https://s3-media3.fl.yelpcdn.com/assets/2/www/img/22affc4e6c38/ico/stars/v1/stars_large_5.png",
+        "id": "rFvy0v7vVFjEE8pRc7nuUg"}], "phone": "4254530991", "snippet_text": "Great
+        selection of men''s clothing in the Seattle area. Although in Seattle downtown,
+        there is a dedicated men''s store - I have found that the store in...", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/347g68BmH7R424I3PraCIA/ms.jpg", "snippet_image_url":
+        "http://s3-media1.fl.yelpcdn.com/photo/RirT8mJgN9BFTqaPAwVTeQ/ms.jpg", "display_phone":
+        "+1-425-453-0991", "rating_img_url_large": "https://s3-media1.fl.yelpcdn.com/assets/2/www/img/e8b5b79d37ed/ico/stars/v1/stars_large_3.png",
+        "id": "banana-republic-bellevue", "is_closed": false, "location": {"city":
+        "Bellevue", "display_address": ["208 Bellevue Sq", "Bellevue, WA 98004"],
+        "geo_accuracy": 8.0, "postal_code": "98004", "country_code": "US", "address":
+        ["208 Bellevue Sq"], "coordinate": {"latitude": 47.6158652454615, "longitude":
+        -122.201762571931}, "state_code": "WA"}}'
+    http_version: 
+  recorded_at: Thu, 19 May 2016 23:26:03 GMT
+recorded_with: VCR 3.0.1
