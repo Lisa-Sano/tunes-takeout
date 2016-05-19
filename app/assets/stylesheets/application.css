@@ -14,6 +14,16 @@
  *= require_self
  */
 
+h1 {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.panel > .panel-heading {
+  background-color: #660066;
+  color: #000;
+}
+
 .yelp-image {
   width: 100%;
 }

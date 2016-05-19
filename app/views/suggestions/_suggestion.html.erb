@@ -8,8 +8,14 @@
       <tr>
         <td class="vert-align">
           <p class="favorite">
-          <%= link_to favorite_suggestion_path(suggestion["id"]), method: :post, class: "favorite-a" do %>
+          <% if current_user && current_page?(controller: 'suggestions', action: 'index') %>
+            <%= link_to favorite_suggestion_path(suggestion["id"]), method: :post, class: "favorite-a" do %>
             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            <% end %>
+          <% elsif current_user %>
+            <%= link_to unfavorite_suggestion_path(suggestion["id"]), method: :delete, class: "favorite-a" do %>
+            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+            <% end %>
           <% end %>
           </p>
         </td>
