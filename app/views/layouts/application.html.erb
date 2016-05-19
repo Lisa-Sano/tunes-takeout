@@ -22,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Tunes&Takeout</a>
+        <a class="navbar-brand" href=<%= suggestions_path %>>Tunes&Takeout</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,8 +45,9 @@
             <li><span class="greeting greeting-text"><%= "Welcome, #{current_user.uid}!" %></span></li>
             <li><%= link_to "Logout", logout_path, method: :delete %></li>
           <% else %>
+            <li><span class="greeting"><img class="spotify-logo" src="https://petermolnar.eu/files/150x140-spotify-logos.png"></span></li>
             <li><span class="greeting greeting-text"><%= "Welcome, Guest!" %></span></li>
-            <li><a href= "auth/spotify" class="spotify-link"><img class="spotify-logo" src="https://petermolnar.eu/files/150x140-spotify-logos.png"></a></li>
+            <li><%= link_to "Sign In With Spotify", "auth/spotify" %></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
