@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :suggestions, :only => [:index] do
     get 'favorites', on: :collection
     post 'favorite', on: :member
+    delete 'unfavorite', on: :member
   end
 
   # Example of regular route:
