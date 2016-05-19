@@ -1,7 +1,6 @@
 <%= @title %>
 
-<div class="row">
+
   <% @food.each_with_index do |f, i| %>
     <%= render partial: "suggestion", locals: { food: f, music: @music[i], number: (i+1), suggestion: @suggestions[i] } %>
   <% end %>
-</div>

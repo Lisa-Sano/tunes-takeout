@@ -1,9 +1,7 @@
 <% if @suggestions.empty? %>
   <p>You have no favorited items!</p>
 <% else %>
-  <div class="row">
-    <% @suggestions.each_with_index do |s, i| %>
-      <%= render partial: "suggestion", locals: { food: @food[i], music: @music[i], number: (i+1), suggestion: s } %>
-    <% end %>
-  </div>
+  <% @suggestions.each_with_index do |s, i| %>
+    <%= render partial: "suggestion", locals: { food: @food[i], music: @music[i], number: (i+1), suggestion: s } %>
+  <% end %>
 <% end %>
