@@ -1,35 +1,38 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Suggestion #<%= number %></h3>
-  </div>
+  <div class="col-md-6 col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Suggestion #<%= number %></h3>
+      </div>
 
-  <div class="media">
-    <div class="media-left media-middle">
-      <a href="<%= food.url %>">
-        <img class="media-object" src="<%= food.image_url %>" alt="the business #{f.name}">
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"><%= food.name %></h4>
-      <img src="<%= food.rating %>" alt="the rating for this business, one to five stars" class="rating">
-      <p>
-        <% food.address.each do |line| %>
-          <p class="address-spacing"><%= line %></p>
-        <% end %>
-        <p class="phone"><%= food.phone %></p>
-      </p>
-    </div>
-  </div>
+      <div class="media">
+        <div class="media-left media-middle">
+          <a href="<%= food.url %>">
+            <img class="media-object" src="<%= food.image_url %>" alt="the business #{f.name}">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= food.name %></h4>
+            <% food.address.each do |line| %>
+              <p class="address-spacing"><%= line %></p>
+            <% end %>
+            <p class="phone"><%= food.phone.nil? ? " " : food.phone %></p>
+        </div>
+      </div>
 
-  <div class="media">
-    <div class="media-left media-middle">
-      <a href="<%= music.url %>">
-        <img class="media-object spotify-image" src="<%= music.image %>" alt="an album cover for #{music.name}">
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"><%= music.name %></h4>
-      <p>Type: <%= music.type %></p>
+      <div class="media">
+        <div class="media-left media-middle">
+          <a href="<%= music.url %>">
+            <img class="media-object spotify-image" src="<%= music.image %>" alt="an album cover for #{music.name}">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= music.name %></h4>
+          <p>Type: <%= music.type %></p>
+        </div>
+      </div>
+
+      <iframe src="https://embed.spotify.com/?uri=<%= music.uri %>" width="300" height="80" frameborder="0" allowtransparency="true" class="player"></iframe>
+
+      <p><%= link_to "Favorite this", favorite_suggestion_path(suggestion["id"]), method: :post if current_user %></p>
     </div>
   </div>
-</div>
