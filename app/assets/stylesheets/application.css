@@ -49,11 +49,38 @@
 }
 
 .table tbody>tr>td.vert-align {
-    vertical-align: middle;
-    font-size: 2rem;
-    padding: 0 1.5rem;
+  vertical-align: middle;
+  font-size: 2rem;
+  padding: 0 1.5rem;
 }
 
-.favorite-a {
-    color: #b30000;
+.favorite-a, .heart-nav {
+  color: #b30000;
 }
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.greeting {
+  line-height: 50px;
+  padding-right: 1rem;
+}
+
+.greeting-text {
+  padding-right: 2rem;
+}
+
+.heart-nav {
+  font-size: 2rem;
+}
+
+.spotify-logo {
+  width: 40px;
+  height: 40px;
+}
+
+/*a.spotify-link {
+  padding: 0;
+}*/

@@ -11,7 +11,7 @@
 <body>
 
   <div class="container">
-  
+
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +28,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><%= link_to "See my favorites", favorites_suggestions_path if current_user %></li>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
@@ -37,8 +36,18 @@
           </form>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Sign In With Spotify", "auth/spotify" unless current_user %></li>
-          <li><%= link_to "Logout", logout_path, method: :delete if current_user %></li>
+          <% if current_user %>
+            <li><%= link_to favorites_suggestions_path do %>
+              <span class="glyphicon glyphicon-heart heart-nav" aria-hidden="true"></span>
+            <% end %>
+            </li>
+            <li><span class="greeting"><img class="user-icon" src="https://s3-us-west-2.amazonaws.com/crowdhubkloveracing/Default_UserIcon.png"></span></li>
+            <li><span class="greeting greeting-text"><%= "Welcome, #{current_user.uid}!" %></span></li>
+            <li><%= link_to "Logout", logout_path, method: :delete %></li>
+          <% else %>
+            <li><span class="greeting greeting-text"><%= "Welcome, Guest!" %></span></li>
+            <li><a href= "auth/spotify" class="spotify-link"><img class="spotify-logo" src="https://petermolnar.eu/files/150x140-spotify-logos.png"></a></li>
+          <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
