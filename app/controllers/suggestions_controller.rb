@@ -8,12 +8,11 @@ class SuggestionsController < ApplicationController
       @title = "Search Results"
     else
       suggestion_ids = TunesTakeoutWrapper.top_suggestions["suggestions"]
-      @suggestions = suggestion_ids.map { |id| TunesTakeoutWrapper.retrieve(id)["suggestion"] }
+      @suggestions = get_suggestions_from_ids(suggestion_ids)
       @title = "Top 20 Suggestions"
     end
 
-    @food = Food.business(@suggestions)
-    @music = Music.find(@suggestions)
+    @food, @music = get_food_and_music(@suggestions)
   end
 
   def favorite
@@ -23,9 +22,18 @@ class SuggestionsController < ApplicationController
 
   def favorites
     suggestion_ids = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"]
-    @suggestions = suggestion_ids.map { |id| TunesTakeoutWrapper.retrieve(id)["suggestion"] }
+    @suggestions = get_suggestions_from_ids(suggestion_ids)
 
-    @food = Food.business(@suggestions)
-    @music = Music.find(@suggestions)
+    @food, @music = get_food_and_music(@suggestions)
+  end
+
+  private
+
+  def get_suggestions_from_ids(id_array)
+    id_array.map { |id| TunesTakeoutWrapper.retrieve(id)["suggestion"] }
+  end
+
+  def get_food_and_music(suggestions_array)
+    [Food.business(suggestions_array), Music.find(suggestions_array)]
   end
 end
