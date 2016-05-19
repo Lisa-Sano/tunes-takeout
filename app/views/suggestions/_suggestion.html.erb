@@ -1,0 +1,15 @@
+  <p>YELP:</p>
+  <img src="<%= food.image_url %>" alt="the business #{f.name}">
+  <p><%= link_to food.name, food.url %></p>
+  <img src="<%= food.rating %>" alt="the rating for this business, one to five stars">
+  <% food.address.each do |line| %>
+    <p><%= line %></p>
+  <% end %>
+  <p><%= food.phone %></p>
+
+  <p>SPOTIFY:</p>
+  <% unless music.nil? %>
+    <img src=<%= music.image %>>
+    <p><%= link_to music.name, music.url %></p>
+    <p>Type: <%= music.type %></p>
+  <% end %>
