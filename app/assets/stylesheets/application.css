@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+.yelp-image {
+  width: 100%;
+}
+
+.media-body {
+  width: 100%;
+}
+
+.spotify-image {
+  width: 100px;
+  height: auto;
+}
+
+.address-spacing {
+  line-height: 40%;
+  font-size: 1.1rem;
+}
+
+.phone {
+  font-size: 1.1rem;
+}
+
+.rating {
+  width: 8%;
+}

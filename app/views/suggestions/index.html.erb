@@ -1,13 +1,5 @@
 <%= @title %>
 
 <% @food.each_with_index do |f, i| %>
-  <%= render partial: "suggestion", locals: { food: f, music: @music[i] } %>
+  <%= render partial: "suggestion", locals: { food: f, music: @music[i], number: (i+1) } %>
 <% end %>
-
-
-
-
-<!-- Includes name of the music item, linking to appropriate Spotify page
-     Includes type of the music item (artist, album, track, or playlist)
-     Includes photo/album cover of the music item
-     Includes embedded Spotify player if appropriate (optional) -->
