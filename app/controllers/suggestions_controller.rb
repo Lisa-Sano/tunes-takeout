@@ -16,5 +16,16 @@ class SuggestionsController < ApplicationController
     @music = Music.find(@suggestions)
   end
 
+  def favorite
+    TunesTakeoutWrapper.favorite(current_user.uid, params[:id])
+    redirect_to suggestions_path
+  end
 
+  def favorites
+    suggestion_ids = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"]
+    @suggestions = suggestion_ids.map { |id| TunesTakeoutWrapper.retrieve(id)["suggestion"] }
+
+    @food = Food.business(@suggestions)
+    @music = Music.find(@suggestions)
+  end
 end

@@ -17,4 +17,16 @@ module TunesTakeoutWrapper
   def self.retrieve(id)
     HTTParty.get(BASE_URL + "/v1/suggestions/#{id}").parsed_response
   end
+
+  # favorite a suggestion
+  def self.favorite(user_id, suggestion_id)
+    HTTParty.post(BASE_URL + "/v1/users/#{user_id}/favorites", 
+      :body => { "suggestion": "#{suggestion_id}" }.to_json,
+      :headers => { 'Content-Type' => 'application/json' } )
+  end
+
+  # get a user's list of favorites
+  def self.get_favorites(user_id)
+    HTTParty.get(BASE_URL + "/v1/users/#{user_id}/favorites").parsed_response
+  end
 end
