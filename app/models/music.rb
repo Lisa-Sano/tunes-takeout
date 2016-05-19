@@ -1,13 +1,14 @@
 require 'rspotify'
 
 class Music
-  attr_reader :name, :url, :type, :image
+  attr_reader :name, :url, :type, :image, :uri
 
   def initialize(data)
     @name = data.name
     @url = data.external_urls["spotify"]
     @type = data.type
     @image = image_from_data(data)
+    @uri = data.uri
   end
   
   def self.find(suggestion_array)
@@ -19,7 +20,7 @@ class Music
       elsif suggestion["music_type"] == "track"
         data = RSpotify::Track.find(suggestion["music_id"])
       end
-
+      
       new(data)
     end
   end
