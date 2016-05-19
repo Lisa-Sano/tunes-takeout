@@ -14,14 +14,23 @@
  *= require_self
  */
 
+body {
+  background-color: #4d4d4d;
+}
+
 h1 {
   text-align: center;
   padding: 2rem 0;
+  color: #fff;
 }
 
 .panel > .panel-heading {
   background-color: #660066;
-  color: #000;
+  color: #fff;
+}
+
+.panel-primary {
+  border-color: #660066;
 }
 
 .yelp-image {
@@ -76,6 +85,7 @@ h1 {
 .greeting {
   line-height: 50px;
   padding-right: 1rem;
+  color: #fff;
 }
 
 .greeting-text {
