@@ -12,6 +12,7 @@
 
   <%= link_to "Sign In With Spotify", "auth/spotify" unless current_user %>
   <%= link_to "Logout", logout_path, method: :delete if current_user %>
+  <%= link_to "See my favorites", favorites_suggestions_path if current_user %>
 
   <%= yield %>
 
