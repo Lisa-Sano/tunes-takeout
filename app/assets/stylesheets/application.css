@@ -16,6 +16,7 @@
 
 body {
   background-color: #4d4d4d;
+  font-size: 16px;
 }
 
 h1 {
@@ -28,6 +29,17 @@ h1 {
   text-align: center;
 }
 
+.limit-search {
+  width: 40px;
+}
+
+.label-tag {
+  font-weight: normal;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  color: #9d9d9d;
+}
+
 .panel > .panel-heading {
   background-color: #660066;
   color: #fff;
@@ -35,6 +47,7 @@ h1 {
 
 .panel-primary {
   border-color: #660066;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
 }
 
 .yelp-image {
