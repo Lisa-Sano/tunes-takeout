@@ -6,15 +6,18 @@
   <table class="table">
     <tbody>
       <tr>
-        <td class="vert-align">
+        <td class="vert-align left-col">
           <p class="favorite">
-          <% if current_user && current_page?(controller: 'suggestions', action: 'index') %>
-            <%= link_to favorite_suggestion_path(suggestion["id"]), method: :post, class: "favorite-a" do %>
-            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-            <% end %>
-          <% elsif current_user %>
-            <%= link_to unfavorite_suggestion_path(suggestion["id"]), method: :delete, class: "favorite-a" do %>
-            <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+          <% if current_user %>
+
+            <% if !favorited.include?(suggestion["id"]) %>
+              <%= link_to favorite_suggestion_path(suggestion["id"]), method: :post, class: "favorite-a" do %>
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+              <% end %>
+            <% elsif current_page?(controller: "suggestions", action: "favorites" ) %>
+              <%= link_to unfavorite_suggestion_path(suggestion["id"]), method: :delete, class: "favorite-a" do %>
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+              <% end %>
             <% end %>
           <% end %>
           </p>

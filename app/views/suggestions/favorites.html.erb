@@ -1,7 +1,13 @@
+<% if flash[:notice] %>
+  <div class="alert alert-info"><%= flash[:notice] %></div>
+<% elsif flash[:error] %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end %>
+
 <% if @suggestions.empty? %>
   <p>You have no favorited items!</p>
 <% else %>
   <% @suggestions.each_with_index do |s, i| %>
-    <%= render partial: "suggestion", locals: { food: @food[i], music: @music[i], number: (i+1), suggestion: s } %>
+    <%= render partial: "suggestion", locals: { food: @food[i], music: @music[i], number: (i+1), suggestion: s, favorited: @already_favorited } %>
   <% end %>
 <% end %>
