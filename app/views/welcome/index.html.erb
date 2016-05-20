@@ -1,15 +1,47 @@
-<h1>Welcome to Tunes & Takeout!</h1>
+<div class="site-wrapper">
 
-<% if current_user %>
-  <%= form_tag suggestions_path, method: :get do %>
-    <%= label_tag :query, "Search for..." %>
-    <%= text_field_tag :query %>
+  <div class="site-wrapper-inner">
 
-    <%= label_tag :limit, "Limit" %>
-    <%= number_field_tag :limit, 10, min: 1, max: 100 %>
+    <div class="cover-container">
 
-    <%= submit_tag "Submit" %>
-  <% end %>
-<% end %>
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">b(EATS)</h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="auth/spotify">Sign In</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
-<p><%= link_to "See top suggestions", suggestions_path %></p>
+      <div class="inner cover">
+        <h1 class="cover-heading cover-text">b(EATS)</h1>
+        <p class="lead cover-text">Find the best tunes to match your cravings.</p>
+        <p class="lead cover-text">
+          <a href="#" class="btn btn-lg btn-default">See Top 20</a>
+        </p>
+      </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>Tunes & Takeout project by Lisa.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
