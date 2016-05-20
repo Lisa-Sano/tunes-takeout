@@ -1,6 +1,7 @@
 require 'tunes_takeout'
 
 class SuggestionsController < ApplicationController
+  before_action :require_login, except: [:index]
 
   def index
     if current_user && params[:query].present?
@@ -13,7 +14,7 @@ class SuggestionsController < ApplicationController
     end
 
     @food, @music = get_food_and_music(@suggestions)
-    @already_favorited = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"]
+    @already_favorited = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"] if current_user
   end
 
   def favorite
