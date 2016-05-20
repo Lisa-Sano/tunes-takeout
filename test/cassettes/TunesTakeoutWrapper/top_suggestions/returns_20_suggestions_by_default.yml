@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tunes-takeout-api.herokuapp.com//v1/suggestions/top?limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Fri, 20 May 2016 00:03:28 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '474'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/top?limit=20","suggestions":["Vz0KQY-RRwADboEQ","Vz0KQY-RRwADboE-","Vz0KO4-RRwADbn9x","Vz0KQY-RRwADboFP","Vz0KO4-RRwADbn9U","Vz0KO4-RRwADbn9t","Vz0KO4-RRwADbn9b","Vz0KO4-RRwADbn9f","Vz0KO4-RRwADbn85","Vz0KQY-RRwADboFB","Vz0KO4-RRwADbn9Q","Vz0KO4-RRwADbn9I","Vz0KO4-RRwADbn9c","Vz0KO4-RRwADbn9V","Vz0KQY-RRwADboFN","Vz0KO4-RRwADbn8Z","Vz0KO4-RRwADbn8x","Vz0KNY-RRwADbn29","Vz0KQY-RRwADboEq","Vz0KO4-RRwADbn9d"]}'
+    http_version: 
+  recorded_at: Fri, 20 May 2016 00:03:28 GMT
+recorded_with: VCR 3.0.1
