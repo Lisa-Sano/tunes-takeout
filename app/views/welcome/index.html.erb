@@ -9,9 +9,7 @@
           <h3 class="masthead-brand">b(EATS)</h3>
           <nav>
             <ul class="nav masthead-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="auth/spotify">Sign In</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href=<%= login_path %>>Sign In With Spotify</a></li>
             </ul>
           </nav>
         </div>
@@ -19,9 +17,9 @@
 
       <div class="inner cover">
         <h1 class="cover-heading cover-text">b(EATS)</h1>
-        <p class="lead cover-text">Find the best tunes to match your cravings.</p>
+        <p class="lead cover-text">Discover the best tunes to match your cravings</p>
         <p class="lead cover-text">
-          <a href="#" class="btn btn-lg btn-default">See Top 20</a>
+          <a href="<%= suggestions_path %>" class="btn btn-lg btn-default">See Top 20</a>
         </p>
       </div>
 
