@@ -20,9 +20,11 @@ module TunesTakeoutWrapper
 
   # favorite a suggestion
   def self.favorite(user_id, suggestion_id)
-    HTTParty.post(BASE_URL + "v1/users/#{user_id}/favorites", 
+    status = HTTParty.post(BASE_URL + "v1/users/#{user_id}/favorites", 
       :body => { "suggestion": "#{suggestion_id}" }.to_json,
       :headers => { 'Content-Type' => 'application/json' } )
+
+    status.code
   end
 
   # get a user's list of favorites
@@ -31,8 +33,10 @@ module TunesTakeoutWrapper
   end
 
   def self.unfavorite(user_id, suggestion_id)
-    HTTParty.delete(BASE_URL + "v1/users/#{user_id}/favorites", 
+    status = HTTParty.delete(BASE_URL + "v1/users/#{user_id}/favorites", 
       :body => { "suggestion": "#{suggestion_id}" }.to_json,
       :headers => { 'Content-Type' => 'application/json' } )
+
+    status.code
   end
 end
