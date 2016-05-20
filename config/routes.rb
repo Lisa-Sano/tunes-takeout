@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create"
   
+  get "/sign-in"     => "sessions#new", as: :login
   delete "/logout" => "sessions#destroy"
 
   resources :suggestions, :only => [:index] do

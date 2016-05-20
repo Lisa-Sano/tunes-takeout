@@ -1,0 +1,9 @@
+<% if flash[:error] %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end %>
+
+<img src='/assets/Spotify_Logo_RGB_Green.png' class="large-login-logo">
+
+<h2>This page requires you to sign in using your Spotify account.</h2>
+
+<%= button_to "Sign In With Spotify", 'auth/spotify', class: "spotify-login" %>

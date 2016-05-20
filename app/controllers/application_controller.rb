@@ -7,4 +7,11 @@ class ApplicationController < ActionController::Base
   def current_user
     @user ||= User.find_by(id: session[:user_id])
   end
+
+  def require_login
+    if current_user.nil?
+      flash[:error] = "Sorry, you must be signed in with Spotify to view this section"
+      redirect_to login_path
+    end
+  end
 end

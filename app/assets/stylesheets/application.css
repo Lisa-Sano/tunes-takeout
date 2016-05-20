@@ -43,6 +43,8 @@ h1 {
 
 .media-body {
   width: 100%;
+  color: #666;
+  text-shadow: 2px 2px 2px #fff;
 }
 
 .spotify-image {
@@ -113,6 +115,30 @@ h1 {
   height: 40px;
 }
 
-/*a.spotify-link {
-  padding: 0;
-}*/
+.large-login-logo {
+  width: 30%;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
+}
+
+.spotify-login {
+  border: 1px solid #333;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: rgb(30, 215, 96);
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+  margin-top: 4rem;
+  width: 20%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.spotify-login:hover {
+    background-color: rgb(30, 215, 96);
+    color: #333;
+}
