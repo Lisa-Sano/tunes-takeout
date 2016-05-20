@@ -24,6 +24,10 @@ h1 {
   color: #fff;
 }
 
+.alert {
+  text-align: center;
+}
+
 .panel > .panel-heading {
   background-color: #660066;
   color: #fff;
@@ -70,7 +74,15 @@ h1 {
 .table tbody>tr>td.vert-align {
   vertical-align: middle;
   font-size: 2rem;
-  padding: 0 1.5rem;
+  padding-left: 1.8rem;
+}
+
+.table {
+  table-layout: fixed;
+}
+
+.table .left-col {
+  width: 50px;
 }
 
 .favorite-a, .heart-nav {
