@@ -4,17 +4,21 @@ class SuggestionsController < ApplicationController
   before_action :require_login, except: [:index]
 
   def index
-    if current_user && params[:query].present?
-      @suggestions = TunesTakeoutWrapper.search(params[:query], params[:limit])["suggestions"]
-      @title = "Search Results"
-    else
-      suggestion_ids = TunesTakeoutWrapper.top_suggestions["suggestions"]
-      @suggestions = get_suggestions_from_ids(suggestion_ids)
-      @title = "Top 20 Suggestions"
-    end
+    suggestion_ids = TunesTakeoutWrapper.top_suggestions["suggestions"]
+    @suggestions = get_suggestions_from_ids(suggestion_ids)
+    @title = "Top 20 Suggestions"
+
 
     @food, @music = get_food_and_music(@suggestions)
     @already_favorited = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"] if current_user
+  end
+
+  def search
+    @title = "Search Results for '#{params[:query]}'"
+    @suggestions = TunesTakeoutWrapper.search(params[:query], params[:limit])["suggestions"]
+    @food, @music = get_food_and_music(@suggestions)
+    @already_favorited = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"] if current_user
+    render :index
   end
 
   def favorite
