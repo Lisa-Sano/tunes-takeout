@@ -101,6 +101,10 @@ h1 {
 }
 
 .favorite-a, .heart-nav {
+  color: #cc0000;
+}
+
+.favorite-a:hover {
   color: #b30000;
 }
 

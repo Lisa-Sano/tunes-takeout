@@ -39,7 +39,7 @@ class SuggestionsController < ApplicationController
     status_code = TunesTakeoutWrapper.unfavorite(current_user.uid, params[:id])
 
     if status_code == 204
-      flash[:notice] = "You successfully removed this favorite."
+      flash[:notice] = "You successfully removed a favorite."
     else
       flash[:error] = "There was an error with your request to unfavorite a suggestion."
     end
