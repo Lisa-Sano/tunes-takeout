@@ -41,11 +41,16 @@ h1 {
 .panel > .panel-heading {
   background-color: #660066;
   color: #fff;
+  border-color: #660066;
 }
 
 .panel-primary {
   border-color: #660066;
   box-shadow: 5px 5px 8px rgba(0,0,0,0.4);
+}
+
+.table {
+  background-color: rgb(34, 34, 34);
 }
 
 .yelp-image {
@@ -58,8 +63,8 @@ h1 {
 
 .media-body {
   width: 100%;
-  color: #666;
-  text-shadow: 2px 2px 2px #fff;
+  color: #808080;
+  /*text-shadow: 2px 2px 2px #fff;*/
 }
 
 .spotify-image {
@@ -127,6 +132,7 @@ h1 {
 
 .heart-nav {
   font-size: 2rem;
+  margin-right: 2rem;
 }
 
 .spotify-logo {
@@ -162,6 +168,16 @@ h1 {
     color: #333;
 }
 
-.beats-brand {
+.beats-brand, .panel-title {
   font-family: "Gruppo";
+  font-size: 2rem;
+}
+
+.navbar-nav>li>a.greeting-image {
+    padding: 0;
+    margin-top: 6px;
+}
+
+.navbar-nav>li>a.greeting-text {
+    padding-left: 1rem;
 }

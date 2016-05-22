@@ -47,8 +47,8 @@
               <span class="glyphicon glyphicon-heart heart-nav" aria-hidden="true"></span>
             <% end %>
             </li>
-            <li><span class="greeting"><img class="user-icon" src=<%= current_user.image || "https://s3-us-west-2.amazonaws.com/crowdhubkloveracing/Default_UserIcon.png" %>></span></li>
-            <li><span class="greeting greeting-text"><%= "Welcome, #{current_user.uid}!" %></span></li>
+            <li><a class="greeting greeting-image" href="https://www.spotify.com/us/account/overview/"><img class="user-icon" src=<%= current_user.image || "/assets/user-icon.png" %>></a></li>
+            <li><a class="greeting greeting-text" href="https://www.spotify.com/us/account/overview/"><%= "Welcome, #{current_user.uid}!" %></a></li>
             <li><%= link_to "Logout", logout_path, method: :delete %></li>
           <% else %>
             <li><span class="greeting"><img class="spotify-logo" src="assets/Spotify_Icon_RGB_Green.png"></span></li>
