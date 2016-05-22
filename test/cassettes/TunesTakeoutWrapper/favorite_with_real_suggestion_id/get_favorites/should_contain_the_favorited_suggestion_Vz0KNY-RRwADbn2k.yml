@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://tunes-takeout-api.herokuapp.com/v1/users/1bb6ba17-f330-4546-b641-6772af537587/favorites
+    body:
+      encoding: UTF-8
+      string: '{"suggestion":"Vz0KNY-RRwADbn2k"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 22 May 2016 05:39:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html;charset=utf-8
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '0'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 22 May 2016 05:39:42 GMT
+- request:
+    method: get
+    uri: https://tunes-takeout-api.herokuapp.com/v1/users/1bb6ba17-f330-4546-b641-6772af537587/favorites
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 22 May 2016 05:39:43 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '141'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/users/1bb6ba17-f330-4546-b641-6772af537587/favorites","suggestions":["Vz0KNY-RRwADbn2k"]}'
+    http_version: 
+  recorded_at: Sun, 22 May 2016 05:39:43 GMT
+- request:
+    method: delete
+    uri: https://tunes-takeout-api.herokuapp.com/v1/users/1bb6ba17-f330-4546-b641-6772af537587/favorites
+    body:
+      encoding: UTF-8
+      string: '{"suggestion":"Vz0KNY-RRwADbn2k"}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Sun, 22 May 2016 05:39:43 GMT
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Content-Type-Options:
+      - nosniff
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sun, 22 May 2016 05:39:43 GMT
+recorded_with: VCR 3.0.1

@@ -6,13 +6,7 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
@@ -21,7 +15,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 22 May 2016 03:44:23 GMT
+      - Sun, 22 May 2016 05:40:28 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -36,5 +30,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/Vz0KNY-RRwADbn2k","suggestion":{"id":"Vz0KNY-RRwADbn2k","food_id":"ohana-seattle-2","music_id":"0DeXBSPxuMGmgT1MSrzXe2","music_type":"album"}}'
     http_version: 
-  recorded_at: Sun, 22 May 2016 03:44:23 GMT
+  recorded_at: Sun, 22 May 2016 05:40:28 GMT
 recorded_with: VCR 3.0.1
