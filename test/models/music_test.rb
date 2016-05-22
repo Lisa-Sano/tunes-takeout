@@ -9,11 +9,11 @@ describe "Music" do
       @first_music = @music.first
     end
 
-    it "returns a collection of objects in an Array" do
+    it "returns a collection of objects in an Array", :vcr do
       assert_instance_of Array, @music
     end
 
-    it "returns a collection of Music instances" do
+    it "returns a collection of Music instances", :vcr do
       assert_instance_of Music, @first_music
     end
   end
