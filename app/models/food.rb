@@ -1,4 +1,5 @@
 require 'yelp'
+require 'uri'
 
 class Food
   BASE_URL = "https://api.yelp.com/"
@@ -16,7 +17,8 @@ class Food
   # yelp business API
   def self.business(suggestions_array)
     suggestions_array.map do |suggestion|
-      new(Yelp.client.business(suggestion["food_id"]))
+      uri_escaped = URI.escape(suggestion["food_id"])
+      new(Yelp.client.business(uri_escaped))
     end
   end
 end
