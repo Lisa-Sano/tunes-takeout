@@ -27,10 +27,8 @@ h1 {
 
 .alert {
   text-align: center;
-}
-
-.limit-search {
-  width: 40px;
+  width: 50%;
+  margin: 2rem auto;
 }
 
 .label-tag {
@@ -52,6 +50,10 @@ h1 {
 
 .yelp-image {
   width: 100%;
+}
+
+.media-heading {
+  margin-bottom: 10px;
 }
 
 .media-body {
