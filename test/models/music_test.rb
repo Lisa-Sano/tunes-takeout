@@ -1,6 +1,22 @@
 require 'test_helper'
 
-describe "Music API" do
+describe "Music" do
+
+  describe "find class method" do
+    before do
+      @music = Music.find([{"music_id" => "0vD0IZ6ol5V30tWQRQKEb5", 
+      "music_type" => "album"}])
+      @first_music = @music.first
+    end
+
+    it "returns a collection of objects in an Array" do
+      assert_instance_of Array, @music
+    end
+
+    it "returns a collection of Music instances" do
+      assert_instance_of Music, @first_music
+    end
+  end
 
   describe "album type" do
     before do
