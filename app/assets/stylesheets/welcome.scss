@@ -118,7 +118,7 @@ body {
 }
 
 .cover-heading {
-  font-size: 5rem;
+  font-size: 10vw;
 }
 
 .cover {
@@ -176,6 +176,10 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 900px;
   }
+}
+
+.beats-brand {
+  font-family: "Gruppo";
 }
