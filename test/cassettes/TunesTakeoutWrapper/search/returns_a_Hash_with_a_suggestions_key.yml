@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Sun, 22 May 2016 03:45:09 GMT
+      - Sun, 22 May 2016 03:45:15 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -36,5 +36,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/search?query=banana\u0026limit=10\u0026seed=banana","suggestions":[{"id":"Vz0KNY-RRwADbn2k","food_id":"ohana-seattle-2","music_id":"0DeXBSPxuMGmgT1MSrzXe2","music_type":"album"},{"id":"Vz0KNY-RRwADbn2l","food_id":"banana-republic-seattle-2","music_id":"0BjkSCLEHlcsogSeDim01W","music_type":"track"},{"id":"Vz3c3Yve9AADSEvq","food_id":"canlis-seattle","music_id":"1zGRC20sEygsipCvPlsrZL","music_type":"artist"},{"id":"Vz0KNY-RRwADbn2n","food_id":"crepe-cafe-and-wine-bar-seattle","music_id":"18XycAkvLpkbHoWqGCgIwN","music_type":"track"},{"id":"Vz3c3Yve9AADSEvs","food_id":"georgian-restaurant-seattle","music_id":"26LHJyH09UaW0jLd1GVnQj","music_type":"track"},{"id":"Vz0KNY-RRwADbn2p","food_id":"poppy-seattle","music_id":"0w1NdKExAwBDoJkYGgeVpJ","music_type":"artist"},{"id":"Vz3c3Yve9AADSEvu","food_id":"just-crepes-seattle","music_id":"1eIicOKCUU1qTIYwOhlMjy","music_type":"album"},{"id":"Vz0KNY-RRwADbn2r","food_id":"serious-pie-seattle-2","music_id":"1Boq6dBs545j0zm4Aj8kz7","music_type":"track"},{"id":"Vz0KNY-RRwADbn2s","food_id":"paseo-seattle-3","music_id":"12movgQwluwLsQgswl9yhz","music_type":"artist"},{"id":"Vz0KNY-RRwADbn2t","food_id":"salted-sea-seafood-and-raw-bar-seattle","music_id":"08nxKiU4zneuIkXa956skH","music_type":"track"}]}'
     http_version: 
-  recorded_at: Sun, 22 May 2016 03:45:10 GMT
+  recorded_at: Sun, 22 May 2016 03:45:16 GMT
 recorded_with: VCR 3.0.1

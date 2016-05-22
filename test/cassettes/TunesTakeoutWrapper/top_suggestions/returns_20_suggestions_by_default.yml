@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Fri, 20 May 2016 00:03:28 GMT
+      - Sun, 22 May 2016 03:44:20 GMT
       Connection:
       - keep-alive
       Content-Type:
@@ -34,7 +34,7 @@ http_interactions:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/top?limit=20","suggestions":["Vz0KQY-RRwADboEQ","Vz0KQY-RRwADboE-","Vz0KO4-RRwADbn9x","Vz0KQY-RRwADboFP","Vz0KO4-RRwADbn9U","Vz0KO4-RRwADbn9t","Vz0KO4-RRwADbn9b","Vz0KO4-RRwADbn9f","Vz0KO4-RRwADbn85","Vz0KQY-RRwADboFB","Vz0KO4-RRwADbn9Q","Vz0KO4-RRwADbn9I","Vz0KO4-RRwADbn9c","Vz0KO4-RRwADbn9V","Vz0KQY-RRwADboFN","Vz0KO4-RRwADbn8Z","Vz0KO4-RRwADbn8x","Vz0KNY-RRwADbn29","Vz0KQY-RRwADboEq","Vz0KO4-RRwADbn9d"]}'
+      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/top?limit=20","suggestions":["Vz0KQY-RRwADboEQ","Vz0KQY-RRwADboE-","Vz0KO4-RRwADbn9t","Vz0KNY-RRwADbn29","Vz0KQY-RRwADboFN","Vz0KO4-RRwADbn9d","Vz0KO4-RRwADbn9Q","Vz0KQY-RRwADboFP","Vz0KO4-RRwADbn9f","Vz0KQY-RRwADboEq","Vz0KO4-RRwADbn9V","Vz0KO4-RRwADbn8Z","Vz0KO4-RRwADbn9x","Vz0KO4-RRwADbn9c","Vz0KO4-RRwADbn9I","Vz0KO4-RRwADbn9U","Vz0KO4-RRwADbn8x","Vz0KO4-RRwADbn85","Vz0KNY-RRwADbn2n","Vz0KO4-RRwADbn9b"]}'
     http_version: 
-  recorded_at: Fri, 20 May 2016 00:03:28 GMT
+  recorded_at: Sun, 22 May 2016 03:44:21 GMT
 recorded_with: VCR 3.0.1
