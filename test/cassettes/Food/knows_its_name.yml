@@ -10,9 +10,9 @@ http_interactions:
       User-Agent:
       - Faraday v0.9.2
       Authorization:
-      - OAuth oauth_consumer_key="8JQ1Y278w82YImqqyGOs2A", oauth_nonce="4745eef805e085ccbde4e7e62261bad9",
-        oauth_signature="%2FXJWhAWgi30Tluzo62E4CeWP7gc%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1463700362", oauth_token="9TkMHs9iaUnf4AF4a1iZ--G9haACiM25",
+      - OAuth oauth_consumer_key="8JQ1Y278w82YImqqyGOs2A", oauth_nonce="fe41a2f2da6c2c079d89db09acbf1e27",
+        oauth_signature="K7Fhrw825WPgjD0X6AaYFv%2FeMcI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1463886131", oauth_token="9TkMHs9iaUnf4AF4a1iZ--G9haACiM25",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 19 May 2016 23:26:03 GMT
+      - Sun, 22 May 2016 03:02:08 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -32,19 +32,19 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=d80a31fdcc8f8122aa942a5a7acdf35f21463700363; expires=Fri, 19-May-17
-        23:26:03 GMT; path=/; domain=.yelp.com; HttpOnly
-      - bse=95c0e37e1ce0c8b129febb184f2556ef; Domain=.yelp.com; Path=/; HttpOnly
-      - yuv=rQfis9G36i1v8gDjUvJgJ-NMFVmeFVxhapAHmwVL4p0TD69bNFZgNbc3DPDbrHParxCjbb1teGA4wailxZiO4nDA8J-KoYkP;
-        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Wed, 14-May-2036 23:26:03
+      - __cfduid=d7ad0a6d44d9bc120f410a8306f6220ef1463886128; expires=Mon, 22-May-17
+        03:02:08 GMT; path=/; domain=.yelp.com; HttpOnly
+      - bse=5881beefc618a139d33df5f6be2d2312; Domain=.yelp.com; Path=/; HttpOnly
+      - yuv=7GWHPjwRYXedreGHP9uroHc0aT5q99n2ykFo3Qt5fpw0W175gxcy9mmKx-wPT3XfgbZcM3vtpQ2NvmkBNjKeYKehuo7CDDl6;
+        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Sat, 17-May-2036 03:02:08
         GMT
       X-Node:
+      - 10-64-170-255-uswest1bprod
       - api_com
-      - web18-r3-sfo2
       Cache-Control:
       - max-age=0, must-revalidate, no-cache, no-store, private
       Expires:
-      - Thu, 19 May 2016 23:26:03 GMT
+      - Sun, 22 May 2016 03:02:08 GMT
       Pragma:
       - no-cache
       Vary:
@@ -52,11 +52,11 @@ http_interactions:
       X-Mode:
       - ro
       X-Proxied:
-      - extlb7-r10-sfo2
+      - 10-64-16-235-uswest1bprod
       Server:
       - cloudflare-nginx
       Cf-Ray:
-      - 2a5b4fc5e57a0d7f-SJC
+      - 2a6d070dcf2c2a5b-SEA
     body:
       encoding: ASCII-8BIT
       string: '{"is_claimed": false, "rating": 3.0, "mobile_url": "http://m.yelp.com/biz/banana-republic-bellevue?utm_campaign=yelp_api\u0026utm_medium=api_v2_business\u0026utm_source=8JQ1Y278w82YImqqyGOs2A",
@@ -84,5 +84,5 @@ http_interactions:
         ["208 Bellevue Sq"], "coordinate": {"latitude": 47.6158652454615, "longitude":
         -122.201762571931}, "state_code": "WA"}}'
     http_version: 
-  recorded_at: Thu, 19 May 2016 23:26:03 GMT
+  recorded_at: Sun, 22 May 2016 03:02:11 GMT
 recorded_with: VCR 3.0.1
