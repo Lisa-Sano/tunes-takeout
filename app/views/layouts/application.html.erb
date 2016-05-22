@@ -53,7 +53,7 @@
           <% else %>
             <li><span class="greeting"><img class="spotify-logo" src="assets/Spotify_Icon_RGB_Green.png"></span></li>
             <li><span class="greeting greeting-text"><%= "Welcome, Guest!" %></span></li>
-            <li><%= link_to "Sign In With Spotify", login_path unless current_page?(controller: "sessions", action: "new") %></li>
+            <li><%= link_to "Sign In/Sign Up With Spotify", login_path unless current_page?(controller: "sessions", action: "new") %></li>
           <% end %>
         </ul>
       </div><!-- /.navbar-collapse -->
