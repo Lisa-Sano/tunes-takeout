@@ -9,7 +9,12 @@
           <h3 class="masthead-brand">b(EATS)</h3>
           <nav>
             <ul class="nav masthead-nav">
-              <li><a href=<%= login_path %>>Sign In With Spotify</a></li>
+              <% if current_user %>
+                <li><%= "Hello, #{current_user.name}." %></li>
+                <li><%= link_to "Logout", logout_path, method: :delete %></li>
+              <% else %>
+                <li><a href=<%= login_path %>>Sign In With Spotify</a></li>
+              <% end %>
             </ul>
           </nav>
         </div>
