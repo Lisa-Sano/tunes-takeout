@@ -14,7 +14,7 @@ class SuggestionsController < ApplicationController
   end
 
   def search
-    @title = "Search Results for '#{params[:query]}'"
+    @search = params[:query]
     @suggestions = TunesTakeoutWrapper.search(params[:query], params[:limit])["suggestions"]
     @food, @music = get_food_and_music(@suggestions)
     @already_favorited = TunesTakeoutWrapper.get_favorites(current_user.uid)["suggestions"] if current_user

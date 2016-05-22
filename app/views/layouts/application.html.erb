@@ -32,7 +32,7 @@
           <% if current_user %>
             <form class="navbar-form navbar-left" role="search" action=<%= search_suggestions_path %>>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" name="query">
+                <input type="text" class="form-control" placeholder="Search" name="query" value=<%= @search || nil %>>
                 <label for="limit" class="label-tag">Limit:</label>
                 <input type="number" class="form-control limit-search" value=10 name="limit" min=1 max=100>
               </div>
