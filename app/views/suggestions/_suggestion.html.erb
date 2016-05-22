@@ -25,32 +25,32 @@
 
         <td>
           <div class="media">
-            <div class="media-left media-middle">
-              <a href="<%= food.url %>">
+            <a href="<%= food.url %>">
+              <div class="media-left media-middle">
                 <img class="media-object" src="<%= food.image_url %>" alt="the business #{f.name}">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><%= food.name %></h4>
-                <% food.address.each do |line| %>
-                  <p class="address-spacing"><%= line %></p>
-                <% end %>
-                <p class="phone"><%= food.phone.nil? ? " " : food.phone %></p>
-            </div>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><%= food.name %></h4>
+                  <% food.address.each do |line| %>
+                    <p class="address-spacing"><%= line %></p>
+                  <% end %>
+                  <p class="phone"><%= food.phone.nil? ? " " : food.phone %></p>
+              </div>
+            </a>
           </div>
         </td>
 
         <td>
           <div class="media">
-            <div class="media-left media-middle">
-              <a href="<%= music.url %>">
-                <img class="media-object spotify-image" src="<%= music.image %>">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><%= music.name %></h4>
-              <p>Type: <%= music.type %></p>
-            </div>
+            <a href="<%= music.url %>">
+              <div class="media-left media-middle">
+                  <img class="media-object spotify-image" src="<%= music.image %>">
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><%= music.name %></h4>
+                <p>Type: <%= music.type %></p>
+              </div>
+            </a>
           </div>
         </td>
 
